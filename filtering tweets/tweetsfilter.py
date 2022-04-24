@@ -90,10 +90,6 @@ def clean_tweets(tweets, d):
         if "\\n" in tweets[i]:
             tweets[i].replace("\\n", "")
     
-    for i in range(len(tweets)):
-        if "\\n" in tweets[i]:
-            tweets[i].replace("\\n", "")
-    
     return tweets
 
 tweets = clean_tweets(tweets, d)
