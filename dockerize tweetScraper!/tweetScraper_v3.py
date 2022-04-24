@@ -125,10 +125,10 @@ def getstocklist():
 
 if __name__ == '__main__':
 
-    consumer_key = "a0JpDjO0BlQTphicnx4umMBig"
-    consumer_secret = "e5L79vmde3o3uAmMMTZMnyRL2rzJTIkWBPpnbpoNrHXJOuwG2E"
-    access_token = "1498424937110978564-ujtqXt7lpEzPG5fHNsQoQXBe10qaBl"
-    access_token_secret = "ebvSphhvVHTKfUmQ1SxCuzCl3CzVWbANL6xszr711ef0f"
+    consumer_key = ****
+    consumer_secret = ****
+    access_token = ****
+    access_token_secret = ****
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
