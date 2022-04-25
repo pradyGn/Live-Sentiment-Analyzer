@@ -10,7 +10,7 @@ docker network create [network_name]
 Now, the minio container should be run on port 9000 and following command can be used to run it.
 
 ```
-docker run -t -d -p 9000:9000 --name [container_name] -- network [network_name] \
+docker run -t -d -p 9000:9000 --name [container_name] --network [network_name] \
 -e "MINIO_ACCESS_KEY" = accesskey \
 -e "MINIO_SECRET_KEY" = secretkey \
 -v [file_in_home_directory]:/data \
