@@ -35,7 +35,30 @@ docker run -d --name tweetScraperContainer --network [network_name] tweet_scrape
 .
 .
 
+Question to wonder on...
 
-The flow chat of how backend would look is as follows,
+Why to collect data in a batch 15 mins and 2 hours?
+- A trader wants a real time sentiment analysis of a certain stock. Collecing data in a batch of lesser than 15 minutes would result in too less of data points for certain stocks. The data points are collected in 2 hour batch as well so that sentiment over longer duration of files can be assessed with minial number of files accessed.
+
+What about the emojis?
+- Emojis have been replace with their description.
+- Example: I love Tesla! 🤗 -> I love Tesla! Hugging face.
+
+What about ads?
+- I plan to build a seperate simple model to filter out ads. I'll probably start with a simple Navie Bayes and check if complex DL models are required or not.
+
+How is the collected data being used for actual sentiment analysis? Isn't this data unlabeled?
+- I have taken inspiration from the semi-supervised learning model in computer vision to solve this problem.
+- Reference: https://arxiv.org/pdf/1905.00546.pdf
+
+Which model to actully perform the heavy weight lifting (Sentiment Analysis)?
+- e-MLM finBERT pre-trained and fine tuned on collected data.
+
+.
+.
+.
+.
+
+The flow chat of how backend (so far) would look is as follows,
 
 ![alt text](https://github.com/pradyGn/Live-Sentiment-Analyzer/blob/main/backend_flowchart.png?raw=true)
